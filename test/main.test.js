@@ -8,23 +8,6 @@ const os = require('os')
 
 let sample = [{a: 1}, {a: 2}, {a: 3}, {a: 4}, {a: 5}]
 
-//  .pipe(myTransform)
-//  .pipe(process.stdout)
-
-//filter.test()
-
-function notInLookup (data) {
-  return this.lookupData.some((d) => d.id === data.id)
-}
-
-function anaToObj (a) {
-  return {id: a[0]}
-}
-
-function mapFn (o) {
-  return {b: o.a}
-}
-
 describe('Simple mapping', () => {
   it('Should be able to map a property to another', (done) => {
     streamify(sample)
